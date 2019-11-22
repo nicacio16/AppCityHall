@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cadastrar Usuário
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-label  position="floating">Nome</ion-label>
+      <ion-input clearInput type="text" name="nome" [(ngModel)]="usuario.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="floating">CPF</ion-label>
+      <ion-input clearInput type="number" name="cpf" [(ngModel)]="usuario.cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="floating">Telefone</ion-label>
+      <ion-input clearInput type="number" name="nome" [(ngModel)]="usuario.telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="floating">Endereço</ion-label>
+      <ion-input clearInput type="text" name="endereco" [(ngModel)]="usuario.endereco"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="floating">Email</ion-label>
+      <ion-input clearInput type="email" name="email" [(ngModel)]="usuario.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="floating">Senha</ion-label>
+      <ion-input clearInput type="password"  name="senha" [(ngModel)]="usuario.senha"></ion-input>
+    </ion-item>
+
+  </ion-card>
+
+  <div padding>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Cadastrar</ion-button>
+    <ion-button  size="medium" color="primary" expand="block" shape="round"  href="login">Fazer Login</ion-button>
+  </div>
+
+</ion-content>

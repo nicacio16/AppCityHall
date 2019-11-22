@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-label  position="floating">Solicitação de Vaga em Creche</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let vaga of listaCreche | async">
+      <ion-label>{{ vaga.responsavel }}<br/>{{ vaga.crianca }}, {{ vaga.idade }} anos<br/>{{ vaga.local }}</ion-label>
+      
+      <ion-button color="danger" shape="round" (click)="excluir(vaga.key)"><ion-icon name="trash"></ion-icon></ion-button>
+      <ion-button color="danger" shape="round" (click)="alterar(vaga)"><ion-icon name="create"></ion-icon></ion-button>
+
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <br/>
+
+  </div>
+
+</ion-content>

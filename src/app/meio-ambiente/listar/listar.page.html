@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-label  position="floating">Solicitação de Poda de Árvore</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let ambiente of listaAmbiente | async">
+      <ion-label>{{ ambiente.localizacao }}<br/>{{ ambiente.descricao }}</ion-label>
+      
+      <ion-button color="danger" shape="round" (click)="excluir(ambiente.key)"><ion-icon name="trash"></ion-icon></ion-button>
+
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <br/>
+
+  </div>
+
+</ion-content>

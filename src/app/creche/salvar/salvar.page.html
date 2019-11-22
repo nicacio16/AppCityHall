@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Solicitar Vaga em Creche
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+      <img src="/assets/imagens/creche.jpg" />
+  </ion-card>
+
+  <ion-card>
+ 
+    <div>
+    <ion-card-content>
+      Para solicitar uma vaga em creche basta preencher os dados abaixo.
+      Não esqueça de cadastrar a vaga de creche para cada filho.
+    </ion-card-content>
+    </div>
+    
+  </ion-card>
+
+  <ion-item>
+    <ion-label  position="floating">Nome do Responsável</ion-label>
+    <ion-input clearInput type="text" name="tipo"  [(ngModel)]="vaga.responsavel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating">Local da Vaga</ion-label>
+    <ion-input clearInput type="text" name="tipo"  [(ngModel)]="vaga.local"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating">Nome da Criança</ion-label>
+    <ion-input clearInput type="text" name="tipo"  [(ngModel)]="vaga.crianca"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating">Idade da Criança</ion-label>
+    <ion-input clearInput type="text" name="tipo"  [(ngModel)]="vaga.idade"></ion-input>
+  </ion-item>
+
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Enviar</ion-button>
+  </div>
+
+</ion-content>

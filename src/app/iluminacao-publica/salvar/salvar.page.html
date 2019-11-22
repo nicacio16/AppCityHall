@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Iluminação Pública
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+      <img src="/assets/imagens/iluminacao.jpg" />
+  </ion-card>
+
+  <ion-card>
+ 
+    <div>
+    <ion-card-content>
+      O município conta com a participação da população para manter a cidade iluminada.
+    </ion-card-content>
+    </div>
+    
+  </ion-card>
+
+  <ion-item>
+    <ion-label  position="floating">Local</ion-label>
+    <ion-input clearInput type="text" name="tipo"  [(ngModel)]="iluminacao.localizacao"></ion-input>    
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating">Descrição</ion-label>
+    <ion-textarea type="text" name="tipo" [(ngModel)]="iluminacao.tipo"></ion-textarea>
+  </ion-item>
+
+      <ion-card-content>
+        <ion-fab horizontal="center" vertical="top" slot="fixed">
+          <ion-fab-button (click)="takePicture()">
+            <ion-icon name="camera"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-card-content>
+      <br/>
+
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Enviar</ion-button>
+  </div>
+
+</ion-content>

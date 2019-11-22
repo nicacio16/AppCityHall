@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Recuperar Senha
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card-header>
+        <ion-card-subtitle>
+          Psiu!
+          Eu lembro sua senha... coloque seu e-mail ali em baixo e clica no botão que eu te mando
+          <ion-icon name="body"></ion-icon>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+  <ion-card>
+    <img src="/assets/imagens/mandei.jpg"/>
+  </ion-card>
+<ion-card-header>
+  <ion-item >
+    <ion-label position="floating">Seu e-mail aqui óh...</ion-label>
+    <ion-input clearInput type="email" [(ngModel)]="usuario.email"></ion-input>
+  </ion-item>
+</ion-card-header>
+  <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="recuperarSenha()">Recuperar Senha</ion-button>
+  <ion-button size="medium" color="primary" expand="block" shape="round" href="login" >Voltar para Login</ion-button>
+  
+</ion-content>

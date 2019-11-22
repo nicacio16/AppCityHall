@@ -1,0 +1,7 @@
+{
+  "name": "cityHall",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

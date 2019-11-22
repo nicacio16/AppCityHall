@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Ouvidoria
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+      <img src="/assets/imagens/ouvidoriapvai.jpg" alt="" />
+  </ion-card>
+
+  <ion-card>
+ 
+    <div>
+    <ion-card-content>
+      A Ouvidoria Municipal de Paranavaí tem feito um excelente trabalho analizando todas
+      reclamações e sugestões dos munícipes, desta forma conseguimos encontrar alguns gargalos
+      no sistema e aperfeiçoá-los.
+    </ion-card-content>
+    </div>
+    
+  </ion-card>
+
+  <ion-item>
+    <ion-label  position="floating">Assunto</ion-label>
+    <ion-input clearInput type="text" name="assunto" [(ngModel)]="ouvidoria.assunto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating">Comentário</ion-label>
+    <ion-textarea [(ngModel)]="ouvidoria.reclamacao"></ion-textarea>
+  </ion-item>
+
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Enviar</ion-button>
+  </div>
+
+</ion-content>

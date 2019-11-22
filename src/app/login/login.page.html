@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <img src="/assets/imagens/logopvai.jpg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>
+          Bem vindo!
+        <ion-icon name="body"></ion-icon>
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input clearInput type="email" [(ngModel)]="usuario.email" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input clearInput type="password" [(ngModel)]="usuario.senha" ></ion-input>
+  </ion-item>
+    <div>
+      <ion-card-content >
+          <ion-button  color="primary" shape="round" (click)="login()">Entrar</ion-button>
+          <ion-button expand="full" fill="outline" color="dark" href="salvar-usuario" >Cadastre-se já!</ion-button>
+          <ion-button expand="full" fill="outline" color="dark" href="salvar-recuperar-senha" >Esqueceu sua senha?</ion-button>
+      </ion-card-content>    
+    </div>
+
+</ion-content>

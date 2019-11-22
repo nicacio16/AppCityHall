@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-label  position="floating">Solicitação de Coleta de Resíduos</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let coleta of listaColeta | async">
+      <ion-label>{{ coleta.categoria }}</ion-label>
+      
+      <ion-button color="danger" shape="round" (click)="excluir(coleta.key)"><ion-icon name="trash"></ion-icon></ion-button>
+      <ion-button color="danger" shape="round" (click)="alterar(coleta)"><ion-icon name="create"></ion-icon></ion-button>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

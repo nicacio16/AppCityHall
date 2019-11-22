@@ -1,0 +1,46 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Iluminação Pública
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+      <img src="/assets/imagens/iptu.jpg" />
+  </ion-card>
+
+  <ion-card>
+ 
+    <div>
+    <ion-card-content>
+      Mantenha seu IPTU em dia, o desenvolvimento do município depende disso!.
+    </ion-card-content>
+    </div>
+    
+  </ion-card>
+
+  <ion-item>
+    <ion-label  position="floating">IPTU</ion-label>
+    <ion-select placeholder="Escolha uma opção de pagamento">
+    <ion-select-option value="b1">Parcela Única</ion-select-option>
+    <ion-select-option value="b2">Parcelamento: 2 X Sem Juros</ion-select-option>
+    <ion-select-option value="b3">Parcelamento: 3 X Sem Juros</ion-select-option>
+    <ion-select-option value="b4">Parcelamento: 4 X Sem Juros</ion-select-option>
+    <ion-select-option value="b5">Parcelamento: 5 X Sem Juros</ion-select-option>
+    <ion-select-option value="b10">Parcelamento: 10 X Com Juros</ion-select-option>  
+    </ion-select>
+  </ion-item>
+
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Enviar</ion-button>
+  </div>
+
+</ion-content>

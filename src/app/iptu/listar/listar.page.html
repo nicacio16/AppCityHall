@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-label  position="floating">Solicitação Boleto IPTU</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let boleto of listaIptu | async">
+      <ion-label>{{ boleto.b }}</ion-label>
+      
+      <ion-button color="danger" shape="round" (click)="excluir(boleto.key)"><ion-icon name="trash"></ion-icon></ion-button>
+
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <br/>
+
+  </div>
+
+</ion-content>

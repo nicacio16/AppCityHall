@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-label  position="floating">Solicitação de Reparo para Iluminação Pública</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let iluminacao of listaIluminacao | async">
+      <ion-label>{{ iluminacao.tipo }}<br/>{{ iluminacao.localizacao }}</ion-label>
+      <ion-button color="danger" shape="round" (click)="excluir(iluminacao.key)"><ion-icon name="trash"></ion-icon></ion-button>
+
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <br/>
+
+  </div>
+
+</ion-content>

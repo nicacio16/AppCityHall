@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Descarte de Resíduos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img src="/assets/imagens/descarte.jpg" alt="" />
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Descarte corretamente, é grátis!</ion-card-title>
+    </ion-card-header>
+
+    <div>
+      <ion-card-content>
+        Para solicitar a coleta dos Resíduos Eletroeletrônicos basta preencher o
+        campo abaixo, é simples, rápido e fácil.
+      </ion-card-content>
+    </div>
+
+  </ion-card>
+
+  <ion-item>
+    <ion-label position="floating">O produto apresenta condições de uso?</ion-label>
+    <ion-select [(ngModel)]="coleta.opcao">
+      <ion-select-option *ngFor='let opcao of listaCategoria | async' [value]="opcao" >
+        {{ opcao.opcao }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating">Qual produto?</ion-label>
+    <ion-input clearInput name="coleta" [(ngModel)]="coleta.categoria"></ion-input>
+  </ion-item>
+
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Descartar</ion-button>
+  </div>
+
+</ion-content>

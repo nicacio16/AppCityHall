@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Guarda Municipal
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img src="/assets/imagens/guardapvai.jpg" alt="" />
+  </ion-card>
+
+  <ion-card>
+    <div>
+      <ion-card-content>
+        A Guarda Municipal de Paranavaí tem feito um excelente trabalho no combate
+        ao crime organizado, como prova disso os índices de violência só caem
+        e para diversas operações são realizadas, abordagens e
+        patrulhamento de rotina são fundamentais para garantia da ordem pública.
+      </ion-card-content>
+    </div>    
+  </ion-card>
+    <br/>
+      <ion-card-content>
+        <ion-fab vertical="center" horizontal="center" slot="fixed">
+          <ion-fab-button (click)="takePicture()">
+            <ion-icon name="camera"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-card-content>
+
+  <ion-item>
+    <ion-label  position="floating">Denúncia</ion-label>
+    <ion-textarea [(ngModel)]="guarda.denuncia"></ion-textarea>
+  </ion-item>
+
+ 
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Denunciar</ion-button>    
+  </div>
+
+
+
+
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-label  position="floating">Solicitação de Atendimento Social</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let pessoa of listaSocial | async">
+      <ion-label>{{ pessoa.nome }}, {{ pessoa.idade }}<br/>{{ pessoa.local }}<br/>{{ pessoa.descricao }}</ion-label>
+      
+      <ion-button color="danger" shape="round" (click)="excluir(pessoa.key)"><ion-icon name="trash"></ion-icon></ion-button>
+
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <br/>
+
+  </div>
+
+</ion-content>

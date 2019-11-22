@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Categoria de Lixo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img src="/assets/imagens/descarte.jpg" alt="" />
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Cadastre as opções abaixo!</ion-card-title>
+    </ion-card-header>
+
+  </ion-card>
+
+  <ion-item>
+    <ion-label  position="floating">Informe opção de resposta.</ion-label>
+    <ion-input clearInput name="opcao" [(ngModel)]="opcao.categoria"></ion-input>
+  </ion-item>
+
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Cadastrar</ion-button>
+  </div>
+
+</ion-content>

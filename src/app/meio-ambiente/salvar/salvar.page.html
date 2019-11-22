@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Meio Ambiente
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+      <img src="/assets/imagens/ambiente.jpg" />
+  </ion-card>
+
+  <ion-card>
+ 
+    <div>
+    <ion-card-content>
+      Conhece alguma árvore que oferece risco de queda? Informe os dados abaixo
+      que enviaremos uma equipe técnica especializada para fazer uma avaliação.
+    </ion-card-content>
+    </div>
+    
+  </ion-card>
+
+  <ion-item>
+    <ion-label  position="floating">Local</ion-label>
+    <ion-input clearInput type="text" name="tipo"  [(ngModel)]="ambiente.localizacao"></ion-input>
+    
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating">Descrição</ion-label>
+    <ion-textarea type="text" name="tipo" [(ngModel)]="ambiente.descricao"></ion-textarea>
+  </ion-item>
+
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Enviar</ion-button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Serviço Social
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+      <img src="/assets/imagens/social.jpg" />
+  </ion-card>
+
+  <ion-card>
+ 
+    <div>
+    <ion-card-content>
+      O CRAS - Centro de Referência de Assistência Social do município
+      trabalha para que todo cidadão se desenvolva, independente da sua
+      classe social. Conhece alguém em situação de vulnerabilidade social?
+      Preencha os dados abaixo para que possamos ajudá-lo(a).
+    </ion-card-content>
+    </div>
+    
+  </ion-card>
+
+  <ion-item>
+    <ion-label  position="floating">Nome</ion-label>
+    <ion-input clearInput type="text" name="nome"  [(ngModel)]="pessoa.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating">Faixa Etária</ion-label>
+    <ion-input clearInput type="text" name="idade"  [(ngModel)]="pessoa.idade"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label  position="floating">Localização</ion-label>
+    <ion-input clearInput type="text" name="local"  [(ngModel)]="pessoa.local"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label  position="floating">Descrição</ion-label>
+    <ion-textarea type="text" name="descricao" [(ngModel)]="pessoa.descricao"></ion-textarea>
+  </ion-item>
+
+  <div padding>
+    <br/>
+    <ion-button  size="medium" color="primary" expand="block" shape="round" (click)="salvar()">Enviar</ion-button>
+  </div>
+
+</ion-content>
