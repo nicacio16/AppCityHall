@@ -25,7 +25,13 @@
       </ion-card-content>
     </div>    
   </ion-card>
-    <br/>
+    
+  <ion-item>
+    <ion-label  position="floating">Denúncia</ion-label>
+    <ion-textarea [(ngModel)]="guarda.denuncia"></ion-textarea>
+  </ion-item>
+
+<br/><br/>
       <ion-card-content>
         <ion-fab vertical="center" horizontal="center" slot="fixed">
           <ion-fab-button (click)="takePicture()">
@@ -33,12 +39,6 @@
           </ion-fab-button>
         </ion-fab>
       </ion-card-content>
-
-  <ion-item>
-    <ion-label  position="floating">Denúncia</ion-label>
-    <ion-textarea [(ngModel)]="guarda.denuncia"></ion-textarea>
-  </ion-item>
-
  
   <div padding>
     <br/>
